@@ -19,7 +19,9 @@
   "integrations_section",
   "telegram_api_token",
   "query_section",
-  "fiscal_year_start"
+  "fiscal_year_start",
+  "branding_section",
+  "brand_logo"
  ],
  "fields": [
   {
@@ -100,12 +102,23 @@
    "fieldname": "allowed_origins",
    "fieldtype": "Data",
    "label": "Allowed Origins"
+  },
+  {
+   "fieldname": "branding_section",
+   "fieldtype": "Section Break",
+   "label": "Branding"
+  },
+  {
+   "fieldname": "brand_logo",
+   "fieldtype": "Attach Image",
+   "label": "Brand Logo",
+   "description": "Shown in the Insights sidebar and login page instead of the Insights logo. Use a logo that reads on a white background."
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-09-05 16:24:09.943954",
+ "modified": "2026-11-10 12:19:42.957063",
  "modified_by": "Administrator",
  "module": "Insights",
  "name": "Insights Settings",

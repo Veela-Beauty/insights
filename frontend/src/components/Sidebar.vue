@@ -5,10 +5,10 @@
 	>
 		<div class="flex flex-grow flex-col overflow-y-auto p-2.5">
 			<div class="rg:flex hidden flex-shrink-0 items-end text-sm text-gray-600">
-				<img src="../assets/insights-logo-new.svg" class="h-7" />
+				<img :src="brandLogo" class="h-7 object-contain" />
 			</div>
 			<router-link to="/" class="rg:hidden flex cursor-pointer">
-				<img src="../assets/insights-logo-new.svg" class="rounded" />
+				<img :src="brandLogo" class="rounded object-contain" />
 			</router-link>
 
 			<div class="mt-4 flex flex-col">
@@ -114,10 +114,13 @@
 
 <script setup>
 import { Avatar } from 'frappe-ui'
+import insightsLogo from '../assets/insights-logo-new.svg'
 
 import HelpDialog from '@/components/HelpDialog.vue'
 import sessionStore from '@/stores/sessionStore'
 import settingsStore from '@/stores/settingsStore'
+
+const brandLogo = window.brand_logo || insightsLogo
 import { createResource } from 'frappe-ui'
 import {
 	Book,

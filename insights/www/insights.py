@@ -13,3 +13,5 @@ def get_context(context):
     frappe.db.commit()
     context.csrf_token = csrf_token
     context.site_name = frappe.local.site
+    # Insights Settings > Brand Logo; empty keeps the Insights logo
+    context.brand_logo = frappe.db.get_single_value("Insights Settings", "brand_logo") or ""

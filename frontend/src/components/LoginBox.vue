@@ -2,7 +2,7 @@
 	<div class="h-full w-full pt-4 sm:pt-16">
 		<div class="relative z-10">
 			<div class="flex">
-				<img src="../assets/insights-logo-new.svg" class="mx-auto h-12" />
+				<img :src="brandLogo" class="mx-auto h-12 object-contain" />
 			</div>
 			<div
 				class="mx-auto bg-white px-4 py-8 sm:mt-6 sm:w-96 sm:rounded-lg sm:px-8 sm:shadow-xl"
@@ -21,5 +21,8 @@
 
 <script setup>
 import FrappeLogo from './Icons/FrappeLogo.vue'
+import insightsLogo from '../assets/insights-logo-new.svg'
+
+const brandLogo = window.brand_logo || insightsLogo
 const props = defineProps(['title'])
 </script>
